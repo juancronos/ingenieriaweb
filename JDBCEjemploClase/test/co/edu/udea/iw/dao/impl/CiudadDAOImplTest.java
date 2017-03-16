@@ -10,7 +10,13 @@ import co.edu.udea.iw.dao.CiudadDAO;
 
 import co.edu.udea.iw.dto.Ciudad;
 import co.edu.udea.iw.exception.MyException;
-
+/**
+ * 
+ * @author Juan
+ * @version 1.0
+ * Esta clase se usa para probar el funcionamiento del 
+ * porgrama que se conecta a la base de datos y muestra las ciudades
+ */
 public class CiudadDAOImplTest {
 
 	@Test

@@ -1,5 +1,9 @@
 package co.edu.udea.iw.exception;
-
+/**
+ * 
+ * @author Juan
+ * @version 1.0
+ */
 public class MyException extends Exception {
 
 	public MyException() {
