@@ -28,6 +28,9 @@ public class CiudadDAOImplTest {
 			ciudadDAO = new CiudadDAOImpl();
 			ciudades = ciudadDAO.get();
 			
+			for(Ciudad ciudad : ciudades){
+				System.out.println(ciudad.getCodigo() + " : " + ciudad.getNombre());
+			}
 			assertTrue(ciudades.size()>0);
 			
 		} catch (MyException e) {

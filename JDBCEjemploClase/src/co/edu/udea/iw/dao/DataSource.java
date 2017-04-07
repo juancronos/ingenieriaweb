@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import co.edu.udea.iw.exception.MyException;
 
-import co.edu.udea.iw.exception.MyException;
+
 /**
  * 
  * @author Juan
@@ -24,7 +24,7 @@ public class DataSource{
 	public Connection getConnection() throws MyException{
 		String url = "jdbc:mysql://localhost:3306/clase";//esta es la direccion de la base de datos
 		String usuario = "Juantorres"; //usuario de la BD
-		String pws = "UdeA2017";	//contraseña para acceder a la BD
+		String pws = "Pandora87";	//contraseña para acceder a la BD
 		Connection con = null;		//objeto tipo connection que sera devuelto por este metodo
 		
 		try {
