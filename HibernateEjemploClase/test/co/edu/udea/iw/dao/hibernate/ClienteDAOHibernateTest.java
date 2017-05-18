@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import co.edu.udea.iw.dao.ClienteDAO;
 import co.edu.udea.iw.dto.Cliente;
+import co.edu.udea.iw.dto.Direccion;
 import co.edu.udea.iw.dto.Usuario;
 import co.edu.udea.iw.exception.MyException;
 
@@ -44,4 +45,24 @@ public class ClienteDAOHibernateTest {
 		}
 	}
 
+	@Test
+	public void getUnoTest(){
+		ClienteDAO clienteDAO = null;
+		Cliente cliente = null;
+		
+		try{
+			clienteDAO = new ClienteDAOHibernate();
+			
+			cliente = clienteDAO.get("1039285274");
+			System.out.println(cliente.getNombres() + " : " + cliente.getCedula());
+			for(Direccion direccion: cliente.getDirecciones()){
+				System.out.println(direccion.getDireccion());
+			}
+			Assert.assertNotNull(cliente);
+			
+		}catch(MyException e){
+			e.printStackTrace();
+			Assert.fail(e.getMessage());			
+		}
+	}
 }
